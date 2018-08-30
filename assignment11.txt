@@ -1,0 +1,19 @@
+Q.1- Find a valid address from a Text
+import re
+a=("email-> nikhilpatial3939@gmail.com and nikhilthakur3939@yahoo.com")
+b=list(a.split(' '))
+for i in b:
+    match=re.finditer('^[\w]*(@)(gmail.com|yahoo.com)',i)
+    for i in match:
+        print(i.group())
+
+
+Q.2- Find a valid indian phone number from a text
+import re
+a=('Mobile Number: +91-9816467226, +91-9872131990')
+b=list(a.split(' '))
+
+for i in b:
+    match=re.finditer('^[+]91-[6-9][0-9]{9}',i)
+    for i in match:
+        print(i.group())
